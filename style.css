@@ -1,0 +1,14 @@
+*{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+    padding: 50px;
+}
+body{
+    background-color: aqua;
+}
