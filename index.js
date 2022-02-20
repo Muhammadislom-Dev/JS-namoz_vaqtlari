@@ -1,4 +1,8 @@
 const containerElement = document.querySelector('.container');
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const data = new Date();
+const month = data.getmonth();
+const year = data.getFullYear();
 
 
 window.navigator.geolocation.getCurrentPosition( async mintaqa => {
@@ -8,7 +12,7 @@ window.navigator.geolocation.getCurrentPosition( async mintaqa => {
     // console.log(latutite, longitude);
     
     
-    const response = await fetch('https://api.aladhan.com/v1/calendar?latitude=41.28594207763672&longitude=69.20355987548825&method=3school=1&month=2&year=2022');
+    const response = await fetch(`https://api.aladhan.com/v1/calendar?latitude=41.28594207763672&longitude=69.20355987548825&method=3school=1&month=${month+1}&year=${year}`);
     const nomoz = await response.json()
  
 
